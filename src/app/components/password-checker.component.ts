@@ -22,8 +22,7 @@ export class PasswordCheckerComponent implements OnInit {
     }
     if (password.length < 8 && password.length >= 3 && (this.uppercase.test(password) || this.numbers.test(password) || this.symbols.test(password))) {
       return '#900C3F';
-    }
-     else if (this.uppercase.test(password) && this.numbers.test(password)) {
+    } else if (this.uppercase.test(password) && this.numbers.test(password)) {
       return '#FF8D29';
     } else {
       return '#B9B4C7';

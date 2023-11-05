@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PasswordCheckerComponent } from './password-checker.component';
-import { FormControl } from '@angular/forms';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {PasswordCheckerComponent} from './password-checker.component';
+import {FormControl} from '@angular/forms';
 
 describe('PasswordCheckerComponent', () => {
   let component: PasswordCheckerComponent;
