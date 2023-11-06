@@ -20,7 +20,7 @@ export class PasswordCheckerComponent implements OnInit {
     if (this.uppercase.test(password) && this.numbers.test(password) && this.symbols.test(password)) {
       return '#54B435';
     }
-    if (password.length < 8 && password.length >= 3 && (this.uppercase.test(password) || this.numbers.test(password) || this.symbols.test(password))) {
+    if (password.length < 8 && (this.uppercase.test(password) || this.numbers.test(password) || this.symbols.test(password))) {
       return '#900C3F';
     } else if (this.uppercase.test(password) && this.numbers.test(password)) {
       return '#FF8D29';
@@ -32,7 +32,7 @@ export class PasswordCheckerComponent implements OnInit {
   secondLineRule(password: string): string {
     if (this.uppercase.test(password) && this.numbers.test(password) && this.symbols.test(password)) {
       return '#54B435';
-    } else if (this.uppercase.test(password) && this.numbers.test(password)) {
+    } else if (this.uppercase.test(password) && this.numbers.test(password) && password.length >= 8) {
       return '#FF8D29';
     } else {
       return '#B9B4C7';
