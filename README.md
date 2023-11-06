@@ -1,3 +1,5 @@
+# Project Title
+
 Task:
 Create applications to test password strength.
 
@@ -14,4 +16,28 @@ If the field has less than 8 characters, all sections are red;
 If the password is easy - the first section is red the rest are gray;
 If the password is medium - the first two sections are yellow the last one is gray;
 If the password is strong, all sections are green;
-___________________________________________________
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+
+### Prerequisites
+
+List any software or tools that need to be installed before starting the project. For example:
+
+- Node.js
+- Angular CLI
+- 
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Jasmin].
+
+### Installation
+
+A step-by-step guide on how to install and set up the project. For example:
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/KhaliapiNA/usense-test.git
