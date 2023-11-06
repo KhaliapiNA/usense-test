@@ -19,8 +19,7 @@ export class PasswordCheckerComponent implements OnInit {
   firstLineRule(password: string): string {
     if (this.uppercase.test(password) && this.numbers.test(password) && this.symbols.test(password)) {
       return '#54B435';
-    }
-    if (password.length < 8 && (this.uppercase.test(password) || this.numbers.test(password) || this.symbols.test(password))) {
+    } else if (password.length < 8 && (this.uppercase.test(password) || this.numbers.test(password) || this.symbols.test(password))) {
       return '#900C3F';
     } else if (this.uppercase.test(password) && this.numbers.test(password)) {
       return '#FF8D29';
