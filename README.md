@@ -1,8 +1,3 @@
-Hello all. I would like to thank USENSE for the opportunity to do such a task. 
-This was the first time when I make somthing on Angular. 
-During task solution I came across options for solving this problem, but the usual addition of a specially available tag didn't like me, so the code you see turned out like this. 
-You can also visit the commit history.
-__________________________________________________________
 Task:
 Create applications to test password strength.
 
