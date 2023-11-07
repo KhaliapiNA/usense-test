@@ -6,5 +6,4 @@ import {Component} from '@angular/core';
   styleUrls: ['./email-input.component.scss']
 })
 export class EmailInputComponent {
-  title = 'usense-test';
 }

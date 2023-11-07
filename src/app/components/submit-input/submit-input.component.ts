@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-
+import {Component} from '@angular/core';
+import {FormControl} from '@angular/forms';
 class AlertService {
 }
 
@@ -8,11 +8,8 @@ class AlertService {
   templateUrl: './submit-input.component.html',
   styleUrls: ['./submit-input.component.scss']
 })
-export class SubmitInputComponent implements OnInit {
-  myClickFunction(event: any) {
-    alert("Thank you for checking my solution");
-  }
-
-  ngOnInit() {
+export class SubmitInputComponent {
+  onSubmit(): void {
+    alert('Thank you for checking my solution!');
   }
 }
