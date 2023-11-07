@@ -10,22 +10,26 @@ export class PasswordCheckerComponent implements OnInit {
   private uppercase = new RegExp(`(?=.*[A-Za-z])`);
   private numbers = new RegExp(`(?=.*[0-9])`);
   private symbols = new RegExp(`(?=.*[!@#$%]+$)`);
-  private grey: string = '#B9B4C7';
-  private red: string = '#900C3F';
-  private yellow: string = '#FF8D29';
-  private green: string = '#54B435';
+  private grey: string;
+  private red: string;
+  private yellow: string;
+  private green: string;
   passwordCheck!: FormControl;
 
   ngOnInit() {
     this.passwordCheck = new FormControl('');
+    this.grey = '#B9B4C7';
+    this.red = '#900C3F';
+    this.yellow = '#FF8D29';
+    this.green = '#54B435';
   }
 
-   firstLineRule(password: string): string {
+  firstLineRule(password: string): string {
     if (this.CheckGreenLine(password)) {
       return this.green;
-    } else if (password.length < 8 && (this.uppercase.test(password) || this.numbers.test(password) || this.symbols.test(password))) {
+    } else if (this.CheckRedLine(password)) {
       return this.red;
-    } else if (this.uppercase.test(password) && this.numbers.test(password)) {
+    } else if (this.CheckYellowLine(password)) {
       return this.yellow;
     } else {
       return this.grey;
@@ -35,7 +39,7 @@ export class PasswordCheckerComponent implements OnInit {
   secondLineRule(password: string): string {
     if (this.CheckGreenLine(password)) {
       return this.green;
-    } else if (this.uppercase.test(password) && this.numbers.test(password) && password.length >= 8) {
+    } else if (this.CheckYellowLine(password)) {
       return this.yellow;
     } else {
       return this.grey;
@@ -52,6 +56,22 @@ export class PasswordCheckerComponent implements OnInit {
 
   CheckGreenLine(password: string): boolean {
     if (this.uppercase.test(password) && this.numbers.test(password) && this.symbols.test(password)) {
+      return true;
+    }
+  }
+
+  CheckYellowLine(password: string): boolean {
+    if ((this.uppercase.test(password) && this.numbers.test(password)) ||
+      (this.numbers.test(password) && this.symbols.test(password)) ||
+      (this.uppercase.test(password) && this.symbols.test(password)) &&
+      password.length >= 8) {
+      return true;
+    }
+  }
+
+  CheckRedLine(password: string): boolean {
+    if (password.length < 8 && (this.uppercase.test(password) ||
+      this.numbers.test(password) || this.symbols.test(password))) {
       return true;
     }
   }
