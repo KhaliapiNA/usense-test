@@ -4,7 +4,7 @@ class AlertService {
 }
 
 @Component({
-  selector: 'submit-input',
+  selector: 'app-submit-input',
   templateUrl: './submit-input.component.html',
   styleUrls: ['./submit-input.component.scss']
 })

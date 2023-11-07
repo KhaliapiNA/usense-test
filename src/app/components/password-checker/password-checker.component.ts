@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 
 @Component({
-  selector: 'password-checker',
+  selector: 'app-password-checker',
   templateUrl: './password-checker.component.html',
   styleUrls: ['./password-checker.component.scss'],
 })
