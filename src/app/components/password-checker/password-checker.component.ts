@@ -50,7 +50,7 @@ export class PasswordCheckerComponent implements OnInit {
     }
   }
 
-  CheckGreenLine(password: string): any {
+  CheckGreenLine(password: string): boolean {
     if (this.uppercase.test(password) && this.numbers.test(password) && this.symbols.test(password)) {
       return true;
     }
